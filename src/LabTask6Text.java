@@ -37,14 +37,14 @@ public class LabTask6Text extends Text {
 
         for(var v: list){
             var sentence = v.toString();
-            String regex = "\\S{"+ String.valueOf(len) +"}";//"\\b.+?\\b";
+            String regex = "\\b.{" +  String.valueOf(len) +"}?\\b";;
             Pattern pattern = Pattern.compile(regex);
 
             Matcher matcher = pattern.matcher(sentence);
             while(matcher.find()){
                 var str = sentence.substring(matcher.start(), matcher.end());
-
-                if(!str.isBlank())
+                str = str.trim();
+                if(!str.isBlank() && str.length() == len)
                     uniqueWords.add(str);
             }
         }

@@ -6,7 +6,7 @@ public class LabMain {
     public static void main(String[] args) {
         //hello?word 545. 4545,656 gdfgd g434 ? 4343 fdgg 545,5434 434 gfdgfg 3434 gdfg?
         //vddsfsfds sdg sds. sdgfdg sdg ssdf.fsd fsd f? sdfsdf.sdf ? sfdf.; dfsf ? fsdвааіва аіва. авііва?df.?
-
+        //LAtin LAting Кирилиця Text? якийсь Текст та числа 4346,43 324? 435 OTHER_1 44.  test ? test2 test3 test4? 45,441 time.
 
         while(true) {
             try {
@@ -54,7 +54,7 @@ public class LabMain {
         while(sIter.hasNext()){
             var s = sIter.next();
 
-            result.append(s + "\n");
+            result.append("\t\t\t" + s + "\n");
         }
 
         return result.toString();
@@ -73,7 +73,7 @@ public class LabMain {
             if(s instanceof LabTask6Sentence){
                 var word = ((LabTask6Sentence)s).getSecondWordStartingWith(ch);
                 if(word != null)
-                    result.append( word+ "\n");
+                    result.append("\t\t\t" + word+ "\n");
             }
 
         }

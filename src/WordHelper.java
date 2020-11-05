@@ -14,7 +14,8 @@ public class WordHelper {
 
     public static boolean isRealNumber(String word){
         try{
-            var val = Double.valueOf(word.replace(',','.'));
+            var str = word.replace(',','.');
+            var val = Double.valueOf(str);
         }
         catch (NumberFormatException e){
             return false;
